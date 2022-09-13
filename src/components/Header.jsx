@@ -76,14 +76,6 @@ const Header = props => {
     if (cart.state.totalItems > 0) {
       setWobble(true);
     }
-
-    const timer = setTimeout(() => {
-      setWobble(false);
-    }, 300);
-
-    return () => {
-      clearTimeout(timer);
-    };
   }, [cart.state.totalItems]);
 
   const setModal = () => {
